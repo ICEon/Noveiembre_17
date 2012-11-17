@@ -82,17 +82,13 @@
             document.getElementById('audio_position').innerHTML = position;
         }
 */
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", 
 
        function onDeviceReady() {
 						
-var options = { limit: 1, duration: 10 };
+var options = { limit: 2, duration: 10 };
 
-navigator.device.capture.captureAudio(captureSuccess, captureError, options);
-
-        }
-
-function captureSuccess(mediaFiles) {
+navigator.device.capture.captureAudio(function (mediaFiles) {
 	
   /*  var i, path, len;
 	
@@ -103,13 +99,17 @@ function captureSuccess(mediaFiles) {
 	alert (mediaFiles.length);
 
     }
+,  function (error) {
+        var msg = 'An error occurred during capture: ' + error.code;
+        navigator.notification.alert(msg, null, 'Uh oh!');
+    }, options);
+
+        }, false);
+
 
     // Called if something bad happens.
     // 
-    function captureError(error) {
-        var msg = 'An error occurred during capture: ' + error.code;
-        navigator.notification.alert(msg, null, 'Uh oh!');
-    }
+   
 
   
 
