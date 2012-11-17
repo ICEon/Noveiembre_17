@@ -93,10 +93,11 @@ navigator.device.capture.captureAudio(captureSuccess, captureError, options);
         }
 
 function captureSuccess(mediaFiles) {
-        var i, len;
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-            uploadFile(mediaFiles[i]);
-       }       
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+        path = mediaFiles[i].fullPath;
+		alert (path);
+	}
 
     }
 
