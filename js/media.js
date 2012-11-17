@@ -83,7 +83,7 @@
         }
 */
 document.addEventListener("deviceready", function () {					
-var opciones = { limit: 3, duration: 10 };
+
 navigator.device.capture.captureAudio(function (Archivo_Media) {
 	  /*  var i, path, len;
 	
@@ -95,9 +95,9 @@ alert (Archivo_Media.length);
     }
 ,  function (error) {
       var msg = 'An error occurred during capture: ' + error.code;
-        navigator.notification.alert(msg, null, 'Uh oh!');
+      //  navigator.notification.alert(msg, null, 'Uh oh!');
 		//alert (err.code);
-    }, opciones);
+    }, { limit: 3, duration: 10 });
 
         }, false);
 
