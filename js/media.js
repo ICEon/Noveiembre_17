@@ -82,70 +82,11 @@
             document.getElementById('audio_position').innerHTML = position;
         }
 */
-
-function inspeccionar(obj)
-{
-  var msg = '';
-  for (var property in obj)
-  {
-    if (typeof obj[property] == 'function')
-    {
-      var inicio = obj[property].toString().indexOf('function');
-      var fin = obj[property].toString().indexOf(')')+1;
-      var propertyValue=obj[property].toString().substring(inicio,fin);
-      msg +=(typeof obj[property])+' '+property+' : '+propertyValue+' ;\n';
-    }
-    else if (typeof obj[property] == 'unknown')
-    {
-      msg += 'unknown '+property+' : unknown ;\n';
-    }
-    else
-    {
-      msg +=(typeof obj[property])+' '+property+' : '+obj[property]+' ;\n';
-    }
-  }
-  return msg;
-}
-
-
-document.addEventListener("deviceready", function () {					
-var opciones = { limit: 2 };
-navigator.device.capture.captureAudio(function (Archivo_Media) {
-	  /*  var i, path, len;
-	
-    for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-        path = mediaFiles[i].fullPath;
-		alert (path);
-	}*/
-
-alert ("here");
-    }
-,  function (erro) {
-//      var msg = 'An error occurred during capture: ' + error.code;
-      //  navigator.notification.alert(msg, null, 'Uh oh!');
-/*if (erro.name.equals (CaptureError.CAPTURE_INTERNAL_ERR))
-{alert ("1");}
-if (erro.equals (CaptureError.CAPTURE_APPLICATION_BUSY))
-{alert ("2");}
-
-if (erro.equals (CaptureError.CAPTURE_INVALID_ARGUMENT))
-{alert ("3");}
-
-if (erro.equlas(CaptureError.CAPTURE_NO_MEDIA_FILES))
-{alert ("4");}
-if (erro.equals(CaptureError.CAPTURE_NOT_SUPPORTED))
-{alert ("5");}*/
-
-
-		alert (erro[0]);
-    }, opciones);
-
-        }, false);
-
-
-    // Called if something bad happens.
-    // 
-   
-
-  
-
+document.addEventListener("deviceready", function(){
+var options = { limit: 2 };
+navigator.device.capture.captureAudio(function(mediaFiles){
+alert(mediaFiles[0].fullPath);
+}, function(err){
+alert(err.code);
+}, options);
+}, false);
