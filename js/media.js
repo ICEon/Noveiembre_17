@@ -92,13 +92,13 @@ navigator.device.capture.captureAudio(function (Archivo_Media) {
 		alert (path);
 	}*/
 
-alert ("here")
+alert ("here");
     }
 ,  function (error) {
-      var msg = 'An error occurred during capture: ' + error.code;
+//      var msg = 'An error occurred during capture: ' + error.code;
       //  navigator.notification.alert(msg, null, 'Uh oh!');
-		alert (error.code);
-    }, { limit: 3});
+		alert ("error: "+ error.code);
+    }, { limit: 1});
 
         }, false);
 
