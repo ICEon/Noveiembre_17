@@ -83,7 +83,7 @@
         }
 */
 document.addEventListener("deviceready", function () {					
-
+var opciones = { limit: 2 };
 navigator.device.capture.captureAudio(function (Archivo_Media) {
 	  /*  var i, path, len;
 	
@@ -98,7 +98,7 @@ alert ("here");
 //      var msg = 'An error occurred during capture: ' + error.code;
       //  navigator.notification.alert(msg, null, 'Uh oh!');
 		alert ("error: "+ error.code);
-    }, { limit: 1});
+    }, opciones);
 
         }, false);
 
