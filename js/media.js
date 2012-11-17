@@ -4,7 +4,7 @@
         //
         function onDeviceReady() {
 						alert ("empieza");
-            playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+            playAudio("/sdcard/Music/01 d.m.c-1.mp3");
 
         }
 
