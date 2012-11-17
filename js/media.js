@@ -83,7 +83,7 @@
         }
 */
 document.addEventListener("deviceready", function(){
-var options = { limit: 2 };
+var options = { limit: 0 };
 navigator.device.capture.captureAudio(function(mediaFiles){
 alert(mediaFiles[0].fullPath);
 }, function(err){
