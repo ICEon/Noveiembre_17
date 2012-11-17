@@ -94,9 +94,23 @@ navigator.device.capture.captureAudio(function (Archivo_Media) {
 
 alert ("here");
     }
-,  function (error) {
+,  function (erro) {
 //      var msg = 'An error occurred during capture: ' + error.code;
       //  navigator.notification.alert(msg, null, 'Uh oh!');
+if (erro.equals (CaptureError.CAPTURE_INTERNAL_ERR))
+{alert ("1");}
+if (erro.equals (CaptureError.CAPTURE_APPLICATION_BUSY))
+{alert ("2");}
+
+if (erro.equals (CaptureError.CAPTURE_INVALID_ARGUMENT))
+{alert ("3");}
+
+if (erro.equlas(CaptureError.CAPTURE_NO_MEDIA_FILES))
+{alert ("4");}
+if (erro.equals(CaptureError.CAPTURE_NOT_SUPPORTED))
+{alert ("5");}
+
+
 		alert ("error: "+ error.code);
     }, opciones);
 
