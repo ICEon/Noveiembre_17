@@ -1,4 +1,4 @@
- document.addEventListener("deviceready", onDeviceReady, false);
+/* document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
@@ -81,3 +81,31 @@
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
+*/
+document.addEventListener("deviceready", onDeviceReady, false);
+
+       function onDeviceReady() {
+						
+var options = { limit: 3, duration: 10 };
+
+navigator.device.capture.captureAudio(captureSuccess, captureError, options);
+
+        }
+
+function captureSuccess(mediaFiles) {
+//        var i, len;
+ //       for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+  //          uploadFile(mediaFiles[i]);
+   //     }       
+   alert (mediaFiles);
+    }
+
+    // Called if something bad happens.
+    // 
+    function captureError(error) {
+        var msg = 'An error occurred during capture: ' + error.code;
+        navigator.notification.alert(msg, null, 'Uh oh!');
+    }
+
+  
+
