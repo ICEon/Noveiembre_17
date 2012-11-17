@@ -88,16 +88,19 @@ document.addEventListener("deviceready", onDeviceReady, false);
 						
 var options = { limit: 1, duration: 10 };
 
-navigator.device.capture.captureAudio(captureSuccess, captureError, {limit : 1});
+navigator.device.capture.captureAudio(captureSuccess, captureError, options);
 
         }
 
 function captureSuccess(mediaFiles) {
-    var i, path, len;
+	
+  /*  var i, path, len;
+	
     for (i = 0, len = mediaFiles.length; i < len; i += 1) {
         path = mediaFiles[i].fullPath;
 		alert (path);
-	}
+	}*/
+	alert (mediaFiles.length);
 
     }
 
