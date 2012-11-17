@@ -111,7 +111,7 @@ if (erro.equals(CaptureError.CAPTURE_NOT_SUPPORTED))
 {alert ("5");}*/
 
 
-		alert ("error: "+ error.name);
+		alert ("error: "+ erro.name);
     }, opciones);
 
         }, false);
