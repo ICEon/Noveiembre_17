@@ -82,11 +82,9 @@
             document.getElementById('audio_position').innerHTML = position;
         }
 */
-document.addEventListener("deviceready", 
-
-       function onDeviceReady() {
+document.addEventListener("deviceready",   function () {
 						
-var options = { limit: 2, duration: 10 };
+var options = { limit: 3, duration: 10 };
 
 navigator.device.capture.captureAudio(function (mediaFiles) {
 	
@@ -97,7 +95,6 @@ navigator.device.capture.captureAudio(function (mediaFiles) {
 		alert (path);
 	}*/
 	alert (mediaFiles.length);
-
     }
 ,  function (error) {
         var msg = 'An error occurred during capture: ' + error.code;
