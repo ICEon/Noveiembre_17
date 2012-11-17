@@ -94,11 +94,12 @@ navigator.device.capture.captureAudio(function (mediaFiles) {
         path = mediaFiles[i].fullPath;
 		alert (path);
 	}*/
-	alert (mediaFiles.length);
+//	alert (mediaFiles.length);
     }
 ,  function (error) {
-        var msg = 'An error occurred during capture: ' + error.code;
-        navigator.notification.alert(msg, null, 'Uh oh!');
+       // var msg = 'An error occurred during capture: ' + error.code;
+        //navigator.notification.alert(msg, null, 'Uh oh!');
+		alert (error.code);
     }, options);
 
         }, false);
