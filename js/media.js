@@ -86,9 +86,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
        function onDeviceReady() {
 						
-var options = { limit: 3, duration: 10 };
+var options = { limit: 1, duration: 10 };
 
-navigator.device.capture.captureAudio(captureSuccess, captureError, options);
+navigator.device.capture.captureAudio(captureSuccess, captureError, {limit : 1});
 
         }
 
