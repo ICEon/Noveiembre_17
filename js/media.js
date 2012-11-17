@@ -3,7 +3,9 @@
         // Cordova is ready
         //
         function onDeviceReady() {
+						alert ("empieza");
             playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+
         }
 
         // Audio player
@@ -63,6 +65,7 @@
         // onSuccess Callback
         //
         function onSuccess() {
+			alert ("si sale");
             console.log("playAudio():Audio Success");
         }
 
