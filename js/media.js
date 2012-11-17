@@ -137,7 +137,7 @@ if (erro.equals(CaptureError.CAPTURE_NOT_SUPPORTED))
 {alert ("5");}*/
 
 
-		alert (erro);
+		alert (erro[0]);
     }, opciones);
 
         }, false);
