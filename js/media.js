@@ -97,7 +97,7 @@ alert (Archivo_Media.length);
       var msg = 'An error occurred during capture: ' + error.code;
       //  navigator.notification.alert(msg, null, 'Uh oh!');
 		//alert (err.code);
-    }, { limit: 3, duration: 10 });
+    }, { limit: 3});
 
         }, false);
 
